@@ -1,5 +1,5 @@
 {% set name = "shiv" %}
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/shiv-{{ version }}.tar.gz
-  sha256: 8f69f7817a2545a94cc8e07a8ec597375cf86e2c1bd0e583ee753d6f31f85060
+  sha256: ddeaf2538fb81c57cc22b9acb755659ba1a8ba7cefb427c58806058401ff45d5
 
 build:
   noarch: python
