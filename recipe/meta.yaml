@@ -15,19 +15,19 @@ build:
     - shiv = shiv.cli:main
     - shiv-info = shiv.info:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip >=9.0.3
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
     - wheel
   run:
     - click !=7.0,>=6.7
     - importlib-resources
     - pip >=9.0.3
-    - python >=3.6
+    - python >={{ python_min }}
     - setuptools
 
 test:
@@ -39,6 +39,7 @@ test:
     - shiv-info --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/linkedin/shiv
